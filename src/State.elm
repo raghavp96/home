@@ -10,10 +10,10 @@ import Content exposing (workExperience, projects)
 init : () -> Url.Url ->  Nav.Key -> ( Model, Cmd Msg )
 init flags url key =
     (   {
-        key = key
-        , url = url
-        , workIndex = 0
-        , projectIndex = 0
+            key = key, 
+            url = url, 
+            workIndex = 0, 
+            projectIndex = 0
         }, Cmd.none )
 
 
