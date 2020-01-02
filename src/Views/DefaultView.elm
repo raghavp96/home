@@ -10,7 +10,7 @@ import Content exposing (workExperience, projects, about)
 import Views.Components.Menu exposing (view)
 import Views.Components.Links exposing (view)
 import Views.Components.Link exposing (view)
-import Views.Components.ListAsParagraph exposing (view)
+import Views.Components.About exposing (view)
 
 viewWorkExperienceSnippet: WorkExperienceEntry -> Html Msg
 viewWorkExperienceSnippet workExperienceEntry = 
@@ -32,25 +32,25 @@ view model =
             br [][], 
             h2 [ class "header" ] [ text "Hello hello, I'm Raghav."],
             h5 [ class "header" ] [ text "(That's short for Raghavprasanna Rajagopalan)" ],
-            h3 [] [ text "I'm a software developer studying at Northeastern University. I build things! I'm currently on wrapping up my M.S in Computer Science, specializing in Artificial Intelligence. I just graduated from Northeastern with a B.S. in Computer Science and Biology this past May!" ],
-            h4 [ class "header" ] [ text "By the way, I'm looking for a job for after I graduate!"],
+            h3 [] [ text "I'm a software developer studying at Northeastern University. I build things! I'm currently wrapping up my M.S in Computer Science, specializing in Artificial Intelligence. I just graduated from Northeastern with a B.S. in Computer Science and Biology this past May!" ],
+            h4 [ class "header" ] [ text "By the way, I'm looking for a job for after I graduate (after May 2020)!"],
             Views.Components.Links.view ], 
         div [ class "row" ] [ 
             br [][], 
             h3 [ class "header nav-heading" ]  [ Views.Components.Link.view "/work" "Work Experience (A Snippet)" ],
-            div [ class "nav"]  [ button [ onClick LeftWork ] [ text "<" ]],
+            div [ class "nav"]  [ button [ class "nav", onClick LeftWork ] [ text "<" ]],
             div [ class "nav-middle" ] [ viewWorkExperienceSnippet (Maybe.withDefault { title = "", company = "", blurb = "", description = [""], link = "", tags = [] } (Array.get model.workIndex (Array.fromList Content.workExperience))) ],
-            div [ class "nav" ] [ button [ onClick RightWork ] [ text ">" ]]],
+            div [ class "nav" ] [ button [ class "nav", onClick RightWork ] [ text ">" ]]],
         div [ class "row" ] [ 
             br [][], 
             h3 [ class "header nav-heading" ] [ Views.Components.Link.view "/project" "Projects (A Snippet)" ],
-            div [ class "nav" ]  [ button [ onClick LeftProject ] [ text "<" ]], 
-            div [ class "nav-middle" ] [ viewProjectEntrySnippet (Maybe.withDefault { title = "", blurb = "", description = "", tags = [] } (Array.get model.projectIndex (Array.fromList Content.projects))) ], 
-            div [ class "nav" ]  [ button [ onClick RightProject ] [ text ">" ]]],
+            div [ class "nav" ]  [ button [ class "nav", onClick LeftProject ] [ text "<" ]], 
+            div [ class "nav-middle" ] [ viewProjectEntrySnippet (Maybe.withDefault { title = "", githubProfile = "", blurb = "", description = "", tags = [] } (Array.get model.projectIndex (Array.fromList Content.projects))) ], 
+            div [ class "nav" ]  [ button [ class "nav", onClick RightProject ] [ text ">" ]]],
         div [ class "row" ] [
             br [][],
             h3 [ class "header" ] [ text "About me" ],
-            Views.Components.ListAsParagraph.view Content.about,
+            Views.Components.About.view,
             div [ class "about" ] [ img [ src "me.JPG"] []]],
         br [][]]
 

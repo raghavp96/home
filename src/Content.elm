@@ -40,25 +40,36 @@ workExperience = [
 
 projects = [
         { 
+            title = "biolink", 
+            githubProfile="rachlin",
+            blurb = "Establishing a framework for building and exploring connected biological knowledge", 
+            description = "I'm currently working with Professor John Rachlin at Northeastern on this project! We're exploring how we might leverage graph databases (Neo4J) to connect data from different biological relational databases. We also provide a REST API and a front end web app. The project is still underway, with nothing publicly accessible just yet, but the Github repo does have a great deal of information documenting our research process, the current state of what's been built, and what some next steps are.",
+            tags = ["Python", "Javascript", "Flask", "Neo4J" , "ReactJS"]
+        },
+        { 
             title = "meta-api", 
+            githubProfile="raghavp96",
             blurb = "The backend for some Slack apps of mine at the moment", 
             description = "Slack is a super fun way to communicate with team members - even the Free tier version of Slack has a lot of great features, like tagging users, threading, creating channels, and allowing you to build and add your own apps to get more out of it. It's so good that my friend group uses it as our messaging platform and we've done a number of customizations to get what we want. One feature the free tier doesn't support is managing user groups. That is, being able to write a message that tags the engineers on your team and notifies them that they were tagged. You'd have to tag each member individually, which is a hassle. An issue no longer! In this project, I serve REST endpoints (that will be hit by slash commands) to manage user groups and tag the members of a group!",
             tags = ["Python", "Flask", "MongoDB" , "Heroku"]
         },
         { 
             title = "league-ai", 
+            githubProfile="raghavp96",
             blurb = "Using Machine Learning and Ai to solve problems in LoL", 
             description = "League of Legends is a popular MOBA style game that's very complex - many factors in a single game (and out of the game) are key to determining what team will win in a given match. I play a bit of League (I'm not good though)! In this project, we (I worked on this with a friend) compared different machine learning algorithms (Random Forest and Neural Networks among them) for their ability in predicting the outcome of a match. Currently we pick the features we saw as most important, but some next steps could be to use techiniques to identify the best features (like PCA).",
             tags = ["Python", "TensorFlow" , "R"]
         },
         { 
             title = "bluebikedata", 
+            githubProfile="raghavp96",
             blurb = " A website, API, and database for blue bike data", 
             description = "Bluebikes is a public bikeshare service in Boston, MA. They're super convenient! In this project, we poll live JSON data that Bluebike at a given interval, and aggregate that data to get insights about bike station usage. We've ported trip data that they release every quarted into tables in our RDBMS. Storing all this data, we expose a REST API that users can connect with to make their own insights, but we provide our own as well on our site, where we use Tableau to answer different questions we had! (Had to take down the site because I ran out of my $300 Google Cloud credit, but the GitHub README has some nice examples).",
             tags = ["Python", "Flask", "Google Cloud SQL" , "Microservices", "Docker"]
             },
         { 
             title = "dockernetes", 
+            githubProfile="raghavp96",
             blurb = "A simple, lightweight system for connecting Docker containers to a network.", 
             description = "As I began working on the bluebikedata project (above), I noticed that wanting to connect different Docker containers (each running their own service) to the same network was something that I needed to do, and it was something I might need to do in the future as well. I paused the project and began working on dockernetes, which I wanted to be a template for managing Docker container intercommunication on a connected network. It's configurable, and adding a new container to the network is as simple as adding a folder with your code and changing the JSON config file to provide some details about the container.",
             tags = ["Docker", "Python"]
@@ -68,5 +79,5 @@ projects = [
 about = [
     "I'm currently doing a PlusOne program at Northeastern where I can get my Masters in Computer Science in one year. I just finished my Bachelors in Computer Science and Biology this past May (2019)! Lately, I've become more interested in AI and machine learning, and have worked on some small projects involving big data and AI. In the near future, I'll potentially get the chance to connect with the other half of my degree, biology (more on this to come!).",
     "Reducing boilerplate code holds a special place in my heart, because I love not having to be redundant. A lot of my coding time is spent building frameworks or templates to make it easier for me to jump right in next time! I also am a big fan of establishing code pipelines, so other developers can focus only on coding.",
-    "Perhaps because of the mentors I've found in my friends and coworkers, I'm super passionate about mentorship and have been helping first year students studying Computer Science at Northeastern navigate their college experience as a Resident Assistant (RA) for the past two years.",
+    "Perhaps because of the mentors I've found in my friends and coworkers, I'm super passionate about mentorship and have been helping first year students studying Computer Science at Northeastern navigate their college experience as a Resident Assistant (RA) for the past two years. As of this semester, I'm also serving as a Teaching Assistant for DS 4300 (Large Scale Storage and Retrieval), and I'm excited for that as well - check out the <a href='http://www.ccs.neu.edu/home/rachlin/nosql/'>course page</a>!",
     "When I'm not coding or RAing, I'm probably getting food with friends, running, or gymming. I've recently got back into doing yoga and listening to podcasts (love NPR's Hidden Brain segment)!"]

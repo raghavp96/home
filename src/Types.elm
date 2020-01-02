@@ -15,7 +15,7 @@ type alias WorkExperienceEntry =
     { title : String, company : String, blurb: String, description : List String, link : String, tags : List String }
 
 type alias ProjectEntry = 
-    { title : String, blurb: String, description : String, tags : List String }
+    { title : String, githubProfile: String, blurb: String, description : String, tags : List String }
 
 type alias AboutEntry = List String
 

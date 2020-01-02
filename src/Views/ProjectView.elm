@@ -16,7 +16,7 @@ viewProjectEntry projectEntry =
         h2 [ class "header" ] [ text projectEntry.title ], 
         div [ class "entry-component" ] [
             p [] [text projectEntry.description]],
-        div [ class "entry-component" ] [Views.Components.Link.view (String.append "https://github.com/raghavp96/" projectEntry.title) (String.append (String.append "Check " projectEntry.title) " out on GitHub.")],
+        div [ class "entry-component" ] [Views.Components.Link.view (String.append "https://github.com/" (String.append projectEntry.githubProfile (String.append "/" projectEntry.title))) (String.append (String.append "Check " projectEntry.title) " out on GitHub.")],
         div [ class "entry-component" ] [ ul [ class "tag" ] (List.map (\item -> li [ class "tag" ] [ Views.Components.Tag.viewTag item ]) projectEntry.tags)]]
 
 viewProjectEntryList: List ProjectEntry -> Html Msg

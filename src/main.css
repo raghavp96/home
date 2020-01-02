@@ -51,6 +51,10 @@ img {
   text-align: center;
 }
 
+button.nav {
+  background-color: transparent;
+}
+
 .nav-heading {
   color: #D45F5A;
 }
