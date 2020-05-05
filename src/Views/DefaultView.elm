@@ -32,8 +32,8 @@ view model =
             br [][], 
             h2 [ class "header" ] [ text "Hello hello, I'm Raghav."],
             h5 [ class "header" ] [ text "(That's short for Raghavprasanna Rajagopalan)" ],
-            h3 [] [ text "I'm a software developer studying at Northeastern University. I build things! I'm currently wrapping up my M.S in Computer Science, specializing in Artificial Intelligence. I just graduated from Northeastern with a B.S. in Computer Science and Biology this past May!" ],
-            h4 [ class "header" ] [ text "By the way, I'm looking for a job for after I graduate (after May 2020)!"],
+            h3 [] [ text "I'm a software developer interested in a lot of different spaces in computer science. I build things! I just wrapped up my M.S in Computer Science, specializing in Artificial Intelligence at Northeastern University! (I also graduated from Northeastern with a B.S. in Computer Science and Biology last year :) )" ],
+            h4 [ class "header" ] [ text "By the way, I'm looking for full-time opportunities now!"],
             Views.Components.Links.view ], 
         div [ class "row" ] [ 
             br [][], 
@@ -51,7 +51,7 @@ view model =
             br [][],
             h3 [ class "header" ] [ text "About me" ],
             Views.Components.About.view,
-            div [ class "about" ] [ img [ src "me.JPG"] []]],
+            div [ class "about" ] [ img [ src "me2.JPG"] []]],
         br [][]]
 
 viewDocument : Model -> Document Msg

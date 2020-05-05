@@ -15,7 +15,7 @@ view =
         text " / ",
         Views.Components.Link.view "https://www.linkedin.com/in/raghavp96/" "LinkedIn",
         text " / ",
-        Views.Components.Link.view "mailto:rajagopalan.rag@husky.neu.edu" "Email",
+        Views.Components.Link.view "mailto:raghavp96@gmail.com" "Email",
         text " / ",
         Views.Components.Link.view "https://www.instagram.com/raghavp96/" "Instagram"
     ]
