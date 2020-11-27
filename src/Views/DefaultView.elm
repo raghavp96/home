@@ -6,11 +6,10 @@ import Html.Attributes exposing (src, href, class, width, height)
 import Html.Events exposing (onClick)
 
 import Types exposing (..)
-import Content exposing (workExperience, projects, about)
+import Content exposing (workExperience, projects)
 import Views.Components.Menu exposing (view)
 import Views.Components.Links exposing (view)
 import Views.Components.Link exposing (view)
-import Views.Components.About exposing (view)
 
 viewWorkExperienceSnippet: WorkExperienceEntry -> Html Msg
 viewWorkExperienceSnippet workExperienceEntry = 
@@ -30,30 +29,27 @@ view model =
         Views.Components.Menu.view, 
         div [ class "row" ] [
             br [][], 
+            br [][], 
+            div [ class "about" ] [ img [ src "me2.JPG"] []],
+            br [][],
             h2 [ class "header" ] [ text "Hello hello, I'm Raghav."],
             h5 [ class "header" ] [ text "(That's short for Raghavprasanna Rajagopalan)" ],
-            h3 [] [ text "I'm a software developer interested in a lot of different spaces in computer science. I build things! I just wrapped up my M.S in Computer Science, specializing in Artificial Intelligence at Northeastern University! (I also graduated from Northeastern with a B.S. in Computer Science and Biology last year :) )" ],
-            h4 [ class "header" ] [ text "By the way, I'm looking for full-time opportunities now!"],
-            Views.Components.Links.view ], 
+            h3 [] [ text "I'm a Software Engineer at 1upHealth in Boston. I recently graduated from Northeastern University (May 2020) with my M.S. in Computer Science, specializing in AI. (I also got my B.S. in Computer Science and Biology from there in May 2019)." ],
+            Views.Components.Links.view ],
         div [ class "row" ] [ 
             br [][], 
-            h3 [ class "header nav-heading" ]  [ Views.Components.Link.view "/work" "Work Experience (A Snippet)" ],
+            h3 [ class "header nav-heading" ]  [ Views.Components.Link.view "/work" "Work Experience" ],
             div [ class "nav"]  [ button [ class "nav", onClick LeftWork ] [ text "<" ]],
             div [ class "nav-middle" ] [ viewWorkExperienceSnippet (Maybe.withDefault { title = "", company = "", blurb = "", description = [""], link = "", tags = [] } (Array.get model.workIndex (Array.fromList Content.workExperience))) ],
             div [ class "nav" ] [ button [ class "nav", onClick RightWork ] [ text ">" ]]],
         div [ class "row" ] [ 
             br [][], 
-            h3 [ class "header nav-heading" ] [ Views.Components.Link.view "/project" "Projects (A Snippet)" ],
+            h3 [ class "header nav-heading" ] [ Views.Components.Link.view "/project" "Projects" ],
             div [ class "nav" ]  [ button [ class "nav", onClick LeftProject ] [ text "<" ]], 
             div [ class "nav-middle" ] [ viewProjectEntrySnippet (Maybe.withDefault { title = "", githubProfile = "", blurb = "", description = "", tags = [] } (Array.get model.projectIndex (Array.fromList Content.projects))) ], 
             div [ class "nav" ]  [ button [ class "nav", onClick RightProject ] [ text ">" ]]],
-        div [ class "row" ] [
-            br [][],
-            h3 [ class "header" ] [ text "About me" ],
-            Views.Components.About.view,
-            div [ class "about" ] [ img [ src "me2.JPG"] []]],
         br [][]]
 
 viewDocument : Model -> Document Msg
 viewDocument model = 
-    { title = "Raghav Home", body = [ view  model ] }
+    { title = "Raghav's Website", body = [ view  model ] }

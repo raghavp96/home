@@ -15,6 +15,18 @@ In the project directory you can run:
 
 - `elm-app build` : Builds the app for production to the `build` folder. The build is minified, and the filenames include the hashes. App is ready to be deployed! (Calling the deploy script instead is porbably safer)
 
+## Notes
+
+- Favicon created with [Favicon generator](). Settings:
+    - Text: "R"
+    - Background: Circle
+    - Font Family: VT323
+    - Font Size: 110
+    - Font Color: #FFFFFF
+    - Background Color: #D45F5A
+
+- Will be redesigning this at some point.
+
 
 ## Build, Push, Deploy
 - I've configured two remotes:

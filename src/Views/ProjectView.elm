@@ -33,4 +33,4 @@ view model =
 
 viewDocument : Model -> Document Msg
 viewDocument model = 
-    { title = "Raghav Projects", body = [ view model ]}
+    { title = "Projects", body = [ view model ]}
